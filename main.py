@@ -19,13 +19,8 @@ if __name__ == "__main__":
     # Init build DB
     for article in jsonStr:
         bbsNoList.append(article['bbs_no'])
-
-    idx = 0
     # Monitor
     while True:
-        idx += 1
-        if idx == 5:
-            bbsNoList.remove('28061')
         while True:
             try:
                 html = requests.get('https://www.coinbit.co.kr/webbbsmain/noticelists/chno-100/&page=1/&subject=')
